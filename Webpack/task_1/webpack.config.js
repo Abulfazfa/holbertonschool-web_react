@@ -1,9 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './js/dashboard_main.js',  // Update the path to where your main JS file is located
+  entry: './js/dashboard_main.js',
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
-  }
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js',
+    publicPath: '/public'
+  },
+  mode: 'production',
 };

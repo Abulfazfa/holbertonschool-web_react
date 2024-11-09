@@ -1,9 +1,32 @@
 const path = require('path');
 
 module.exports = {
-  entry: './js/dashboard_main.js',  // Update the path to where your main JS file is located
+  entry: './js/dashboard_main.js',
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
-  }
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js',
+    publicPath: '/public'
+  },
+  mode: 'production',
+  module: {
+	rules: [
+		{
+			test: /\.css$/i,
+			use: ["css-loader", "style-loader"],
+		},
+		{
+			test: /\.(gif|png|jpe?g|svg)$/i,
+			use: [
+				"file-loader",
+				{
+					loader: "image-webpack-loader",
+					options: {
+							bypassingOnDebug: true,
+							disable: true,
+					},
+				},
+			],
+		},
+	],
+},
 };
