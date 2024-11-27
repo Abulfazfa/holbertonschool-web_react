@@ -26,9 +26,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/preset-env": "^7.12.16",
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.12.13",
+    "babel-jest": "^29.7.0",
     "babel-loader": "^8.2.2",
     "chai": "^4.3.0",
     "enzyme": "^3.11.0",
